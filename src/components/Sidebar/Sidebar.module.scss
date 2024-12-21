@@ -2,7 +2,8 @@
 @import "styles/mixins.scss";
 
 .sidebar {
-  background-color: $darkBlack;
+  // background-color: $darkBlack;
+  background-color: $dark-900;
   padding: 4rem 0;
   max-width: fit-content;
   position: fixed;

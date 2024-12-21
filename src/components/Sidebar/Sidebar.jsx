@@ -1,5 +1,4 @@
 import styles from './Sidebar.module.scss';
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -18,7 +17,6 @@ const links = [
   { name: 'relatório', icon: <MdInsertChartOutlined />, url: '/relatorio' },
   { name: 'configurações', icon: <MdOutlineSettings />, url: '/configuracoes' },
 ];
-
 
 const Sidebar = () => {
 

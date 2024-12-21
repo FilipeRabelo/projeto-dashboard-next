@@ -12,6 +12,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   background-color: $secondary;
+  // background-color: $dark-900;
 }
 
 body {
@@ -56,6 +57,7 @@ h4,
   &.btn-primary {
     background-color: $primary;
     color: $white;
+    border-radius: 5px;
 
     &:hover:not(:disabled) {
       cursor: pointer;
