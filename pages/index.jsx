@@ -2,6 +2,8 @@ import Heading from 'src/UI/Heading/Heading';
 import Link from 'next/link';
 import styles from '../styles/Dashboard.module.scss';
 import Cards from 'src/components/Card/Cards';
+import SalesHistory from 'src/components/SalesHistory/SalesHistory';
+import SalesGoal from 'src/components/SalesGoal/SalesGoal';
 
 export default function Home() {
   return (
@@ -16,12 +18,15 @@ export default function Home() {
         Nova Venda
       </Link>
 
-      <section className={styles.columns}>
-        <section className={styles.columns1}>
-          <Cards/>
+      <section className={styles.column}>
+        <section className={styles.column1}>
+          <Cards />
+          <SalesHistory />   {/* histórico de vendas dos últimos messes */}
         </section>
-        
-        <section className={styles.columns2}></section>
+
+        <section className={styles.column2}>     {/* Metas de vendas e top produtos + vendidos*/}
+          <SalesGoal />
+        </section>
       </section>
 
     </section>

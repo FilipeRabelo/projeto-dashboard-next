@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.salesGoal{
+  @include card(2rem);
+  margin-bottom: 2rem;
+
+  .chart{
+    margin: 2rem 0;
+  }
+
+  h4{
+    text-align: center;
+  }
+}

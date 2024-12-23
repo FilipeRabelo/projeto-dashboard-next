@@ -1,0 +1,26 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.dashboard{
+  
+  .column{
+    display: flex;
+    gap: 6rem;
+    margin-top: 3rem;
+  }
+
+  .column1,  
+  .column2{
+    width: 100%;
+  }
+
+  // .column1{
+  //   border: 1px solid crimson;
+  // }
+
+  .column2{
+    max-width: 30rem;
+
+    // border: 1px solid crimson;
+  }
+}
