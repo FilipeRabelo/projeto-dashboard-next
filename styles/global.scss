@@ -1,6 +1,6 @@
-@import './variables.scss';
-@import './mixins.scss';
-@import './syncfusion.scss';
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./syncfusion.scss";
 
 * {
   margin: 0;
@@ -11,8 +11,8 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background-color: $secondary;
-  // background-color: $dark-900;
+  // background-color: $secondary;
+  background-color: #aaa;
 }
 
 body {

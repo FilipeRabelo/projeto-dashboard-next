@@ -4,6 +4,7 @@ import styles from '../styles/Dashboard.module.scss';
 import Cards from 'src/components/Card/Cards';
 import SalesHistory from 'src/components/SalesHistory/SalesHistory';
 import SalesGoal from 'src/components/SalesGoal/SalesGoal';
+import TopSales from 'src/components/TopSales/TopSales';
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
         </section>
 
         <section className={styles.column2}>     {/* Metas de vendas e top produtos + vendidos*/}
-          <SalesGoal />
+          <SalesGoal /> {/* vendas */}
+          <TopSales />  {/* produtos */}
         </section>
       </section>
 

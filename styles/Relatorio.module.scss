@@ -1,0 +1,10 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.section{
+
+  .charts{
+    display: grid;
+    grid-template-columns: 1fr 1fr; // para deixar um ao lado do outro
+  }
+}

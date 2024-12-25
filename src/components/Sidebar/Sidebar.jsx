@@ -23,10 +23,13 @@ const Sidebar = () => {
   const router = useRouter();
 
   let {route} = router;
+  
+  if (route === '/nova-venda') route = '/';
+  if (route === '/produtos/adicionar') route = '/produtos';
 
   const renderLinks = links.map((link, i) => (
     <li key={i}>
-      <Link href={link.url} className={route === link.url ? styles.active : ''}>
+      <Link href={link.url} className={route === link.url ? styles.active : ''}>  {/* para ativar */}
         <div>{link.icon}</div>
         <span>{link.name}</span>
       </Link>
