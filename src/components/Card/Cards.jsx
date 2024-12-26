@@ -15,7 +15,7 @@ const Cards = () => {
       <Card title={'Vendas'} subtitle={'Total de vendas hoje:'} value={today} />
       <Card title={'Acumulado'} subtitle={'Total de vendas:'} value={total} />
     </div>
-  )
-}
+  );
+};
 
 export default Cards;

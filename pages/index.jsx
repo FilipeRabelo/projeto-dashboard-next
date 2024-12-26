@@ -6,8 +6,22 @@ import SalesHistory from 'src/components/SalesHistory/SalesHistory';
 import SalesGoal from 'src/components/SalesGoal/SalesGoal';
 import TopSales from 'src/components/TopSales/TopSales';
 import client from 'src/sanity';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { createOrdersWithProduct, populateOrders, populateProducts, populateSales } from 'src/store/dashboard-slice';
+import { setConfig } from 'src/store/ui-slice';
 
-export default function Home({orders, products, config}) {
+export default function Home({ orders, products, config }) {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(populateOrders(orders));
+    dispatch(populateProducts(products));
+    dispatch(setConfig(config));
+    dispatch(createOrdersWithProduct());
+    dispatch(populateSales());
+  }, []);
 
   return (
     <section className={styles.dashboard}>
