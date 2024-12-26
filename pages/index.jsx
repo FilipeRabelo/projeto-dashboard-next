@@ -58,7 +58,7 @@ export const getStaticProps = async () => {   // pega os dados do banco de dados
 
   const orders = await client.fetch('*[_type == "orders"]'); // dando um fetch no db onde o type for = orders
   const products = await client.fetch('*[_type == "products"]'); // dando um fetch no db onde o type for = orders
-  const config = await client.fetch('*[_type == "config"]'); // dando um fetch no db onde o type for = orders
+  const config = await client.fetch('*[_type == "config"][0]'); // dando um fetch no db onde o type for = orders
 
   return {
     props: {
