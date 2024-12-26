@@ -63,7 +63,7 @@ const dashboardSlice = createSlice({
           ...order,
           date: new Date(order.date),
           product: product.name,
-          amount: product.price * order.amount,
+          amount: product.price * order.quantity,
         }
       }) || [];
 
