@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { setConfig } from "next/config";
+// import { setConfig } from "next/config";
 
 const initialState = {          // estado inicial para o slice
   id: null,
