@@ -5,8 +5,10 @@ import Cards from 'src/components/Card/Cards';
 import SalesHistory from 'src/components/SalesHistory/SalesHistory';
 import SalesGoal from 'src/components/SalesGoal/SalesGoal';
 import TopSales from 'src/components/TopSales/TopSales';
+import client from 'src/sanity';
 
-export default function Home() {
+export default function Home({orders, products, config}) {
+
   return (
     <section className={styles.dashboard}>
 
@@ -34,3 +36,22 @@ export default function Home() {
     </section>
   );
 }
+
+// getStaticProps é renderizado antes de toda a pagina seja renderizada
+// requisição dos 3 esquemas
+
+export const getStaticProps = async () => {   // pega os dados do banco de dados e envia como props para o componente
+
+  const orders = await client.fetch('*[_type == "orders"]'); // dando um fetch no db onde o type for = orders
+  const products = await client.fetch('*[_type == "products"]'); // dando um fetch no db onde o type for = orders
+  const config = await client.fetch('*[_type == "config"]'); // dando um fetch no db onde o type for = orders
+
+  return {
+    props: {
+      orders,
+      products,
+      config
+    }
+  };
+
+};
